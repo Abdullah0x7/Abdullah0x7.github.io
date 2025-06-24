@@ -11,7 +11,7 @@ twitter_username: Abdullah_0x7
 github_username: Abdullah0x7
 
 # Build settings
-theme: minima
+theme: jekyll-theme-hacker
 plugins:
   - jekyll-feed
 
