@@ -4,6 +4,7 @@ title:  "Understanding 0xScanner: A Beginner's Guide to Network Port Scanning"
 date:   2025-06-24 01:35:10 +0100
 categories: Networking
 author: Abdullah Bello
+tags: Cybersecurity Networking Tutorial
 ---
 
 ## What is 0xScanner?
@@ -372,7 +373,6 @@ python3 0xScanner.py -t mail.company.com -p 25,587,993,995
 
 - Better secure your own networks
 - Troubleshoot network issues more effectively  
-- Learn valuable cybersecurity skills
 - Contribute to making the internet safer
 
 Remember: with great power comes great responsibility. Always use these tools ethically and legally, and never scan systems without proper authorization.
