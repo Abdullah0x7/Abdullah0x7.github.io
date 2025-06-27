@@ -142,6 +142,6 @@ If all of this sounds a bit too technical or you're just starting your journey i
 
 👇 Start with the basics in my beginner-friendly post:
 
-**🔰 [A Nigerian Guide to IoT Security: Protecting Your Smart Devices and Personal Data](https://abdullah0x7.github.io/networking/2025/06/27/Understanding-IoT-and-AI-in-Everyday-Life.html)**
+**🔰 [A Nigerian Guide to IoT Security: Protecting Your Smart Devices and Personal Data](https://abdullah0x7.github.io/networking/2025/06/27/A-Nigerian-Guide-to-IoT-Security-Protecting-Your-Smart-Devices-and-Personal-Data.html)**
 
 It breaks down the core ideas in simple terms perfect for beginners.

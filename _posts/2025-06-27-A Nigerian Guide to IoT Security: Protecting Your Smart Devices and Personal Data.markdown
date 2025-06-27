@@ -151,7 +151,7 @@ So go ahead, enjoy your smart TV, your Bluetooth speaker, even your talking frid
 > If you’re curious about the technical side of smart devices, how they collect data, the risks they pose, and what Nigerian laws say about your digital privacy
 >
 > 👉 Check out my detailed guide:
-> **🔐 [Understanding IoT and AI in Everyday Life](https://abdullah0x7.github.io/networking/2025/06/26/Understanding-IoT-and-AI-in-Everyday-Life.html)**
+> **🔐 [Understanding IoT and AI in Everyday Life](https://abdullah0x7.github.io/networking/2025/06/27/Understanding-IoT-and-AI-in-Everyday-Life.html)**
 >
 > It explores:
 >
