@@ -130,12 +130,12 @@ Using smart devices isn’t a bad thing. In fact, they’re part of our digital 
 
 To summarize:
 
-✅ Use strong passwords
-✅ Update devices regularly
-✅ Separate networks for different device types
-✅ Only enable features you truly need
-✅ Choose reliable brands
-✅ Review your privacy settings
+- ✅ Use strong passwords
+- ✅ Update devices regularly
+- ✅ Separate networks for different device types
+- ✅ Only enable features you truly need
+- ✅ Choose reliable brands
+- ✅ Review your privacy settings
 
 ---
 
@@ -145,4 +145,21 @@ To summarize:
 So go ahead, enjoy your smart TV, your Bluetooth speaker, even your talking fridge. Just make sure they’re not outsmarting your sense of security.
 
 ---
+
+> ### Want to Dive Deeper?
+
+> If you’re curious about the technical side of smart devices, how they collect data, the risks they pose, and what Nigerian laws say about your digital privacy
+>
+> 👉 Check out my detailed guide:
+> **🔐 [Understanding IoT and AI in Everyday Life](https://abdullah0x7.github.io/networking/2025/06/26/Understanding-IoT-and-AI-in-Everyday-Life.html)**
+>
+> It explores:
+>
+> * How IoT and AI work together
+> * Real-life security threats in Nigeria
+> * Practical ways to protect your data (like 2FA, strong Wi-Fi encryption)
+> * What the Nigerian Data Protection Regulation (NDPR) says about your rights
+> * Global standards like OWASP’s Top 10 for IoT
+>
+> Whether you’re a techie or just security conscious, this guide breaks it all down.
 
