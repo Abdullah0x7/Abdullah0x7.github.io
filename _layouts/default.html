@@ -58,27 +58,58 @@
 <script>
   window.addEventListener("load", function(){
     window.cookieconsent.initialise({
+      type: "opt-in",
       palette: {
-        popup: { background: "#1b1b1b" },  // Hacker-style dark
-        button: { background: "#33ff33", text: "#000000" }
+        popup: { background: "#1b1b1b" },
+        button: { background: "#33ff33", text: "#000" }
       },
       theme: "classic",
       position: "bottom-right",
       content: {
         message: "This site uses cookies to improve your experience.",
-        dismiss: "Got it!",
+        dismiss: "Accept",
+        allow: "Accept",
+        deny: "Decline",
         link: "Privacy Policy",
         href: "/privacy-policy"
+      },
+      onInitialise: function (status) {
+        if (this.hasConsented()) {
+          enableGA();
+        }
+      },
+      onStatusChange: function(status, chosenBefore) {
+        if (this.hasConsented()) {
+          enableGA();
+        }
       }
     });
+
+    function enableGA() {
+      // Load Google Analytics script after consent
+      var script1 = document.createElement('script');
+      script1.src = "https://www.googletagmanager.com/gtag/js?id=G-PMZJMWM3M5";
+      script1.async = true;
+      document.head.appendChild(script1);
+
+      var script2 = document.createElement('script');
+      script2.innerHTML = `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-PMZJMWM3M5');
+      `;
+      document.head.appendChild(script2);
+    }
   });
 </script>
+
    <footer style="text-align: center; padding: 1em; margin-top: 3em; border-top: 1px solid #ccc; font-size: 0.9em;">
   <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }} — Built with 💻 by <a href="https://github.com/Abdullah0x7" target="_blank">@Abdullah0x7</a></p>
   <p>
     <a href="/about/">About</a> · 
     <a href="/contact/">Contact</a> · 
-    <a href="https://twitter.com/Abdullah_0x7" target="_blank">Twitter</a>
+    <a href="/privacy-policy">Privacy Policy</a> ·
   </p>
 </footer>
 
