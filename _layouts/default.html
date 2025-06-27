@@ -8,6 +8,17 @@
     {% include head-custom.html %}
 
 {% seo %}
+{% if jekyll.environment == "production" %}
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PMZJMWM3M5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PMZJMWM3M5');
+</script>
+{% endif %}
+
   </head>
 
   <body>
@@ -42,7 +53,27 @@
         {{ content }}
       </section>
     </div>
-      <footer style="text-align: center; padding: 1em; margin-top: 3em; border-top: 1px solid #ccc; font-size: 0.9em;">
+<!-- Cookie Consent by Osano -->
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+<script>
+  window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      palette: {
+        popup: { background: "#1b1b1b" },  // Hacker-style dark
+        button: { background: "#33ff33", text: "#000000" }
+      },
+      theme: "classic",
+      position: "bottom-right",
+      content: {
+        message: "This site uses cookies to improve your experience.",
+        dismiss: "Got it!",
+        link: "Privacy Policy",
+        href: "/privacy-policy"
+      }
+    });
+  });
+</script>
+   <footer style="text-align: center; padding: 1em; margin-top: 3em; border-top: 1px solid #ccc; font-size: 0.9em;">
   <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }} — Built with 💻 by <a href="https://github.com/Abdullah0x7" target="_blank">@Abdullah0x7</a></p>
   <p>
     <a href="/about/">About</a> · 
@@ -50,5 +81,6 @@
     <a href="https://twitter.com/Abdullah_0x7" target="_blank">Twitter</a>
   </p>
 </footer>
+
   </body>
 </html
