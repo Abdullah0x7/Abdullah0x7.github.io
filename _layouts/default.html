@@ -53,60 +53,6 @@
         {{ content }}
       </section>
     </div>
-<!-- Cookie Consent with Accept and Decline (styled) -->
-<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
-<script>
-  window.addEventListener("load", function(){
-    window.cookieconsent.initialise({
-      type: "opt-in",
-      palette: {
-        popup: { background: "#1b1b1b", text: "#fff" },
-        button: { background: "#33ff33", text: "#000" }
-      },
-      theme: "classic", 
-      position: "bottom-right",
-      content: {
-        message: "This site uses cookies to improve your experience.",
-        allow: "Accept",
-        deny: "Decline",
-        link: "Privacy Policy",
-        href: "/privacy-policy"
-      },
-      elements: {
-        allow: '<button class="cc-btn cc-allow">Accept</button>',
-        deny: '<button class="cc-btn cc-deny" style="margin-left: 10px;">Decline</button>'
-      },
-      onInitialise: function (status) {
-        if (this.hasConsented()) {
-          enableGA();
-        }
-      },
-      onStatusChange: function(status, chosenBefore) {
-        if (this.hasConsented()) {
-          enableGA();
-        }
-      }
-    });
-
-    function enableGA() {
-      var script1 = document.createElement('script');
-      script1.src = "https://www.googletagmanager.com/gtag/js?id=G-PMZJMWM3M5";
-      script1.async = true;
-      document.head.appendChild(script1);
-
-      var script2 = document.createElement('script');
-      script2.innerHTML = `
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-PMZJMWM3M5');
-      `;
-      document.head.appendChild(script2);
-    }
-  });
-</script>
-
-
    <footer style="text-align: center; padding: 1em; margin-top: 3em; border-top: 1px solid #ccc; font-size: 0.9em;">
   <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }} — Built with 💻 by <a href="https://github.com/Abdullah0x7" target="_blank">@Abdullah0x7</a></p>
   <p>
