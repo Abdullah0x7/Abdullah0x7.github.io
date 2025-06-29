@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Tags
-nav: true
 permalink: /tags/
 ---
 
