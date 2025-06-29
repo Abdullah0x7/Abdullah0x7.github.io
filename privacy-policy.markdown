@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Privacy Policy
+nav: true
 permalink: /privacy-policy/
 ---
 

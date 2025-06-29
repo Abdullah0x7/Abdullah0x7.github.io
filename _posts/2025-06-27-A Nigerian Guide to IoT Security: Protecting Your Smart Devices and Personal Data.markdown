@@ -4,7 +4,7 @@ title:  "🔐 A Nigerian Guide to IoT Security: Protecting Your Smart Devices an
 date:   2025-06-27 01:35:10 +0100
 categories: Networking
 author: Abdullah Bello
-tags: Cybersecurity Networking 
+tags: [Cybersecurity, Networking] 
 ---
 
 Picture this: You wake up and your water heater has already turned on because it detected NEPA brought light. Your electric kettle starts boiling, your smart speaker greets you with your morning playlist, and your curtains open automatically like magic. Welcome to the world of the **Internet of Things (IoT)**.

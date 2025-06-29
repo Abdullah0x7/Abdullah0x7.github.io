@@ -4,7 +4,7 @@ title:  "Understanding 0xScanner: A Beginner's Guide to Network Port Scanning"
 date:   2025-06-24 01:35:10 +0100
 categories: Networking
 author: Abdullah Bello
-tags: Cybersecurity Networking Tutorial
+tags: [Cybersecurity, Networking,Tutorial]
 ---
 
 ## What is 0xScanner?
