@@ -78,7 +78,7 @@ We want to:
 
 ## 🧑‍💼 Roles
 
-In IAM Identity Center, permission sets are used in place of traditional IAM roles to define what users can do once they assume access into AWS accounts. You create custom permission sets to serve the same function.
+In IAM Identity Center, permission sets are used in place of traditional IAM roles to define what users can do once they assume access into AWS accounts. You create permission sets to serve the same function.
 
 Think of roles like a **temporary gate pass at an airport**, it gives access only while you need it and only to specific parts of the terminal.
 
