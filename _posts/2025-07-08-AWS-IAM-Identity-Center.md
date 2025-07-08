@@ -48,7 +48,7 @@ To understand IAM more easily, let’s use an **airport security analogy**:
 * **Users** – individual identities that represent humans or applications.
 * **Groups** – collections of users that share the same permissions.
 * **Roles** – AWS identities with specific permissions that can be assumed temporarily.
-* **Policies** – JSON documents that define allowed or denied actions.
+* **Policies** – Documents that define allowed or denied actions.
 
 ---
 
@@ -88,12 +88,12 @@ Think of roles like a **temporary gate pass at an airport**, it gives access onl
 
 Policies are like **boarding passes or ID badges**. They specify what a person is allowed to do, just like a badge might say, "Can enter Lounge A" or "Can access Gate 5 only."
 
-In AWS, these permissions are defined in JSON format. Here’s an example:
+Here’s an example:
 
 ### Step 3: Create a Read-Only Permission Set
 
 * Go to **Permission Sets > Create permission set**
-* Choose **Custom permission set** and set **ReadOnlyAccess**:
+* Choose **Predefined permission set** and set **ReadOnlyAccess**:
 
 > ![ReadOnlyAccess Policy](/assets/img/readonly.png)
 
