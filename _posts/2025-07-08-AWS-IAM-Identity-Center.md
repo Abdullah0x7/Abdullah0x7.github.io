@@ -141,7 +141,7 @@ This confirms that the read-only permissions are applied correctly.
 With IAM Identity Center, you’ve set up scalable, secure access by:
 
 * Using **groups** to control access
-* Applying **read-only permissions** with custom sets
+* Applying **read-only permissions** with predefined sets
 * Confirming access behavior with live user testing
 
 💡 One important takeaway: **A user's permissions are only as strong as the groups that have actual permission sets attached.** In our example:
