@@ -200,6 +200,7 @@ If latency, compliance, or data gravity prevent full public cloud adoption, Orac
 - **OCI Dedicated Region**: A full Oracle Cloud region deployed inside your facility, ideal for strict regulatory or data‑sovereignty requirements.
 
 > *Certification Flashcard:* When I asked which OCI offering lets you run cloud services in your own data center while meeting compliance mandates, the answer that matters for exams and architecture reviews is **OCI Dedicated Region**.
+
 ---
 
 # 7. Security: Responsibility, Controls, Detection, Protection
