@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Elevator Pitch
+title: Elevator-Pitch
 nav: false
 permalink: /elevator-pitch/
 ---

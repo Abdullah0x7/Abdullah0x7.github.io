@@ -1,110 +1,85 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    {% include head-custom.html %}
+<html lang="{{ site.lang | default: " en-US" }}">
 
-{% seo %}
-{% if jekyll.environment == "production" %}
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PMZJMWM3M5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-PMZJMWM3M5');
-</script>
-{% endif %}
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  {% include head-custom.html %}
+  <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
-  </head>
+  {% seo %}
+  {% if jekyll.environment == "production" %}
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PMZJMWM3M5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-PMZJMWM3M5');
+  </script>
+  {% endif %}
 
-  <body>
+</head>
 
-    <header>
-      <div class="container">
-        <a id="a-title" href="{{ '/' | relative_url }}">
-          <h1>{{ site.title | default: site.github.repository_name }}</h1>
-        </a>
+<body>
+  <header class="site-header">
+    <div class="containerx">
+      <a id="a-title" href="{{ '/' | relative_url }}" class="site-title">
+        <h1>{{ site.title | default: site.github.repository_name }}</h1>
+      </a>
 
-        <section id="pages">
-            {%- for page in site.pages -%}
-              {%- if page.nav == true -%}
-                <a href="{{ page.url }}">{{ page.title | escape }}</a>&nbsp;
-              {%- endif -%}
-            {%- endfor -%}
-        </section>
+      <nav class="site-nav">
+        <div class="nav-links">
+          {%- for page in site.pages -%}
+          {%- if page.nav == true -%}
+          <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+          {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </nav>
 
-        <h2>{{ site.description | default: site.github.project_tagline }}</h2>
-
-      
-        
-        <input type="text" id="search-input" placeholder="Search posts...">
-        <ul id="results-container"></ul>
-
-      </div>
-    </header>
-
-    <div class="container">
-      <section id="main_content">
-        {{ content }}
-      </section>
+      <h2 class="site-tagline">{{ site.description | default: site.github.project_tagline }}</h2>
     </div>
+  </header>
 
-   <footer style="text-align: center; padding: 1em; margin-top: 3em; border-top: 1px solid #ccc; font-size: 0.9em;">
-  <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }} — Built with 💻 by <a href="https://github.com/Abdullah0x7" target="_blank">@Abdullah0x7</a></p>
-  <p>
-    <a href="/about/">About</a> · 
-    <a href="/contact/">Contact</a> · 
-    <a href="/tags/">Tags</a> ·
-    <a href="/privacy-policy">Privacy Policy</a> ·
-  </p>
-</footer>
 
-  </body>
- <script src="https://unpkg.com/simple-jekyll-search/dest/simple-jekyll-search.min.js"></script>
+  <div class="container">
+    <section id="main_content">
+      {{ content }}
+    </section>
+  </div>
+
+  <footer style="text-align: center; padding: 1em; margin-top: 3em; border-top: 1px solid #ccc; font-size: 0.9em;">
+    <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }} — Built with 💻 by <a href="https://github.com/Abdullah0x7"
+        target="_blank">@Abdullah0x7</a></p>
+    <p>
+      <a href="/about/">About</a> ·
+      <a href="/contact/">Contact</a> ·
+      <a href="/tags/">Tags</a> ·
+      <a href="/privacy-policy">Privacy Policy</a> ·
+    </p>
+  </footer>
+  <button id="backToTop" title="Go to top">↑</button>
+</body>
+
 
 <script>
-  // Define debounce first
-  function debounce(func, wait = 300) {
-    let timeout;
-    return function (...args) {
-      clearTimeout(timeout);
-      timeout = setTimeout(() => func.apply(this, args), wait);
-    };
-  }
+  // Show button when user scrolls down
+  window.onscroll = function () {
+    const btn = document.getElementById("backToTop");
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  };
 
-  // Wait for DOM to load
-  window.onload = function () {
-    const input = document.getElementById('search-input');
-    const results = document.getElementById('results-container');
-
-    // Initialize the Simple Jekyll Search instance
-    const runSearch = SimpleJekyllSearch({
-      searchInput: input,
-      resultsContainer: results,
-      json: '/search.json',
-      searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
-      noResultsText: 'No results found',
-      limit: 10
-    });
-
-    // Debounced input handler
-    const debouncedSearch = debounce(() => {
-      if (input.value.length < 3) {
-        results.innerHTML = '';
-        return;
-      }
-      // Trigger the search
-      input.dispatchEvent(new Event('input'));
-    });
-
-    input.addEventListener('keyup', debouncedSearch);
+  // Scroll to top when button is clicked
+  document.getElementById("backToTop").onclick = function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 </script>
-
-
 
 </html

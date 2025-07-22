@@ -1,18 +1,21 @@
 
 
-title: cat abdullah.blog
+title: Abdullah.Bello
 email: AbdullahBello@proton.me
 description: >- # this means to ignore newlines until "baseurl:" 
- Breaking, building, and blogging about tech, security, and real-life wins and fails.
+ AWS Cloud Solutions Architect
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: Abdullah_0x7
 github_username: Abdullah0x7
 
+
 # Build settings
 theme: jekyll-theme-hacker
 plugins:
   - jekyll-feed
+
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
