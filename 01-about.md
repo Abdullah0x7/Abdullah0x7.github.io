@@ -45,10 +45,10 @@ This blog is where I architect, break, fix, and reflect.
 
 ### 📜 My Philosophy
 
-Architect with intent.
-Secure from day one.
-Document everything.
-And when it breaks? Fix it, blog it, and move on.
+- Architect with intent.
+- Secure from day one.
+- Document everything.
+- And when it breaks? Fix it, blog it, and move on.
 
 ---
 
