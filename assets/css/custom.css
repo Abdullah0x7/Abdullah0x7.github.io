@@ -1,15 +1,32 @@
 body {
-  background-color: #f4f7f9;
+  background-color: #232f3e;
 }
 
-.site-header {
-  background-color: #232f3e;
+#site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #232f3e; /* AWS dark blue */
   color: white;
   padding: 1rem 0;
   border-bottom: 3px solid #ff9900;
-  position: sticky;
-  top: 0;
+  transition: transform 0.3s ease-in-out;
   z-index: 1000;
+}
+
+.header-hidden {
+  transform: translateY(-100%);
+}
+
+a {
+  color: #005b9f;
+  text-decoration: underline;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 2rem 0;
 }
 
 .containerx {
@@ -137,4 +154,29 @@ body {
 
 #backToTop:hover {
   background-color: #444;
+}
+
+.nav-links a.active {
+  font-weight: bold;
+  color: #ff9900;
+  border-bottom: 2px solid #ff9900;
+}
+
+
+
+.badge-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.badge-grid img {
+  width: 100px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+.badge-grid img:hover {
+  transform: scale(1.05);
 }

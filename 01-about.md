@@ -14,6 +14,11 @@ I’m currently diving deep into the ALX AWS Cloud Fellowship, where I’m gaini
 This blog is my digital brain dump: a mix of lessons learned, architectural patterns, project breakdowns, and the occasional “why won’t this work” moment, all shared in public as I grow.
 
 ---
+## 🏅 Badges
+
+ ![OCI Foundations Associate](/assets/img/OCI25FNDCFA.png)
+
+---
 
 ### 🛠 What I Do
 
