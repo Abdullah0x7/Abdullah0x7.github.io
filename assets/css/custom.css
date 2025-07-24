@@ -1,6 +1,32 @@
+/* AWS Themed Overrides */
 body {
-  background-color: #232f3e;
+  color: #ffffff;
+  font-family: "Amazon Ember", "Helvetica Neue", Arial, sans-serif;
 }
+
+a {
+  color: #ff9900;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #ff9900;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-family: "Amazon Ember", "Helvetica Neue", Arial, sans-serif;
+}
+
+header {
+  background-color: #232f3e;
+  border-bottom: 4px solid #ff9900;
+  padding: 20px;
+  text-align: center;
+}
+
+ul li { list-style-image: url("/assets/img/bullet.png"); }
 
 #site-header {
   position: fixed;
@@ -16,11 +42,6 @@ body {
 
 .header-hidden {
   transform: translateY(-100%);
-}
-
-a {
-  color: #005b9f;
-  text-decoration: underline;
 }
 
 hr {

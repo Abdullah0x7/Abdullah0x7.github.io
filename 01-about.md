@@ -6,7 +6,7 @@ permalink: /about/
 ---
 
 ## Hi, I’m Abdullah Bello. 
-An aspiring AWS Solutions Architect
+An aspiring Cloud Engineer
 
 Welcome to my corner of the internet.
 I’m currently diving deep into the ALX AWS Cloud Fellowship, where I’m gaining hands-on experience designing scalable, secure, and cost-effective cloud solutions. With a background in Computer Science, I’m passionate about building in the cloud.
@@ -17,6 +17,7 @@ This blog is my digital brain dump: a mix of lessons learned, architectural patt
 ## 🏅 Badges
 
  ![OCI Foundations Associate](/assets/img/OCI25FNDCFA.png)
+ ![Google Cybersecurity Professional Certificate V2](/assets/img/goole-cybersec.png)
 
 ---
 
