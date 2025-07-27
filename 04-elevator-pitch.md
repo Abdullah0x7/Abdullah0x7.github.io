@@ -1,24 +1,24 @@
 ---
 layout: default
 title: Elevator-Pitch
-nav: false
+nav: true
 permalink: /elevator-pitch/
 ---
 
 # 🎤 Elevator Pitch
 
-Here’s a quick 60-second overview of who I am, what I do, and where I’m headed.
+Here’s a quick overview of who I am, what I do, and where I’m headed.
 
-<video width="100%" controls>
-  <source src="/assets/videos/elevator-pitch.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
+  <iframe 
+    src="https://www.youtube.com/embed/9GE9BGArG9A" 
+    frameborder="0" 
+    allowfullscreen 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+  </iframe>
+</div>
 
 ---
 
 ### 💡 TL;DR
-
-I’m Abdullah Bello, an AWS Engineer-in-training with a passion for cybersecurity and sharing knowledge. I believe in breaking things (safely), learning out loud, and building in public.
-
-
--------
+I'm Abdullah Bello, a recent graduate of Computer Science from the University of Medical Sciences Ondo, and an aspiring Cloud Engineer. Over time, I have developed a strong interest in simplifying technical concepts and sharing knowledge. I realized teaching helps me learn better, and I want to build a career where I can combine knowledge sharing and technical growth.
