@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Understanding VPC and Subnets"
+title:  "Understanding AWS VPC and Subnets"
 date:   2025-07-20 01:35:10 +0100
 categories: Cloud Computing
 author: Abdullah Bello
@@ -8,13 +8,13 @@ tags: [Cloud-Computing, AWS]
 ---
 
 
-If you're diving into AWS and cloud networking, one of the foundational concepts you'll encounter is the **Virtual Private Cloud (VPC)**. In this article, I’ll break down what a VPC is, why it matters, how subnets fit into the picture, and how I set up **VPC peering** between two isolated VPCs.
+If you're diving into AWS and cloud networking, one of the foundational concepts you'll encounter is the **Virtual Private Cloud (VPC)**.
 
 ---
 
 ## What is a VPC?
 
-A **Virtual Private Cloud (VPC)** in AWS is a logically isolated section of the AWS cloud where you can launch resources (like EC2 instances, databases, etc.) in a controlled network environment.
+A **Virtual Private Cloud (VPC)** in AWS is a logically isolated section of the AWS cloud where you can launch resources (like EC2 instances, databases, etc.) in a controlled network environment.  When you create anything on AWS, from EC2 instances to RDS databases, it lives inside a **VPC**. 
 
 Think of a VPC like your own **private data center** inside AWS:
 
@@ -34,17 +34,11 @@ Here’s why VPCs are foundational:
 
 ---
 
-## The Math Behind Subnets (CIDR Notation Explained)
+## CIDR Blocks and Subnetting 101
 
 If you've seen CIDRs like `10.10.0.0/16` or `10.10.1.0/24` and wondered what those numbers really mean, here’s a quick breakdown:
 
-### CIDR = Classless Inter-Domain Routing
-
-It’s written like:
-
-```
-<Network IP>/<Prefix length>
-```
+ *The CIDR (Classless Inter-Domain Routing) notation defines the size of your network or subnet.*
 
 Example:
 
@@ -61,9 +55,9 @@ This means:
 
 | CIDR Block | Available IPs | Breakdown                              |
 | ---------- | ------------- | -------------------------------------- |
-| `/16`      | 65,536 IPs    | 2¹⁶ = 65,536 (minus 5 reserved by AWS) |
-| `/24`      | 256 IPs       | 2⁸ = 256 (minus 5 reserved by AWS)     |
-| `/28`      | 16 IPs        | 2⁴ = 16 (minus 5 = 11 usable)          |
+| `/16` (32-16 = 16)         | 65,536 IPs    | 2¹⁶ = 65,536 (minus 5 reserved by AWS) |
+| `/24` (32-24 = 8)          | 256 IPs       | 2⁸ = 256 (minus 5 reserved by AWS)     |
+| `/28` (32-28 = 4)          | 16 IPs        | 2⁴ = 16 (minus 5 = 11 usable)          |
 
 > AWS **reserves 5 IPs per subnet**:
 >
@@ -83,7 +77,7 @@ Let’s say your VPC is `10.10.0.0/16`:
   * `10.10.3.0/24`
   * ... up to `10.10.255.0/24`
 
-This lets you organize your VPC like:
+This lets you organize your VPC into public and private subnets like this:
 
 * `10.10.1.0/24` → Public subnet
 * `10.10.2.0/24` → Private subnet
@@ -92,23 +86,24 @@ This lets you organize your VPC like:
 
 ## Subnets — Public vs Private
 
-Inside a VPC, subnets determine **where** and **how** resources live inside your VPC.
+Inside a VPC, subnets determine **where** and **how** resources live inside your VPC. Basically, they are how you divide your VPC into smaller networks, like putting your resources into different rooms of a house.
+
 
 | Subnet Type        | Description                                              | Example Use                 |
 | ------------------ | -------------------------------------------------------- | --------------------------- |
 | **Public Subnet**  | Can access the internet (if routed via Internet Gateway) | Web servers, bastion hosts  |
 | **Private Subnet** | No direct internet access                                | Databases, backend services |
 
-In my VPC setup:
+## Availability Zones and Subnets
 
-* VPC-A: `10.10.0.0/16`
+Here’s a **crucial detail**:
+ **VPCs are regional**, but **subnets are tied to individual Availability Zones (AZs).**
+That means:
 
-  * Public Subnet: `10.10.1.0/24`
-  * Private Subnet: `10.10.2.0/24`
-* VPC-B: `10.20.0.0/16`
+* A single VPC can span multiple Availability Zones (AZs)
+* But each subnet **must reside in one AZ**
 
-  * Public Subnet: `10.20.1.0/24`
-  * Private Subnet: `10.20.2.0/24`
+This is important when designing **fault-tolerant architectures**, because placing subnets in different AZs allows you to distribute and replicate resources for high availability.
 
 ---
 
@@ -116,12 +111,14 @@ In my VPC setup:
 
 **VPC Peering** is a networking connection between two VPCs that allows internal communication between resources as if they’re in the same network.
 
+Key features:
+
 * **No NAT or Internet Gateway required**
 * **Secure**: traffic flows entirely within the AWS global network
 
 Here’s a screenshot of my peering connection:
 
-![Peering Connection](attachment from image 1)
+> ![Peering Connection](/assets/img/VPC-peering-connection.png)
 
 ---
 
@@ -138,7 +135,9 @@ To enable communication:
 
 Here’s how VPC-B’s subnets and route table are associated:
 
-!\[VPC-B Subnets]\(attachment from image 2)
+> ![VPC-B Subnets](/assets/img/VPC-B_CIDR_BLOCK.png)
 
 ---
+## In Conclusion
 
+Mastering **VPCs and subnets** is like learning the foundation of cloud architecture. Whether you're building a simple web app or designing enterprise-grade systems, a solid grasp of CIDR blocks, subnet planning, and route tables will serve you well.
