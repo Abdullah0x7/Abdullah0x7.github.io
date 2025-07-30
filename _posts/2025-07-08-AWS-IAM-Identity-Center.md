@@ -4,7 +4,7 @@ title:  "AWS IAM Identity Center: Secure Access Management with Groups, Users, a
 date:   2025-07-08 01:35:10 +0100
 categories: Cloud Computing
 author: Abdullah Bello
-tags: [Cloud-Computing]
+tags: [Cloud-Computing, AWS]
 ---
 
 > Learn how to securely manage AWS access using IAM Identity Center with a real-world example: setting up group-based read-only permissions for users.
