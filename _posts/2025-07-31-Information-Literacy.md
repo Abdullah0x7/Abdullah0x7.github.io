@@ -77,6 +77,7 @@ It's what allows you to:
 - **Converse** better by bringing facts and thoughtful insights to the table
 
 **Download the full PDF guide on Information Literacy**
+_Read the introduction and chapters 1-2(pages 4-15)_
 [Click here to download](/assets/files/ifla-guidelines-en.pdf){:target="_blank"}
 
 ---
