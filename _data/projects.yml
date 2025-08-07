@@ -1,7 +1,7 @@
-- title: EC2 Web Server Setup
-  image: /assets/img/adding_users_to%20_group.png
-  url: /projects/ec2-setup
+- title: "CSN Project: Deploying Grafana on Amazon ECS using Fargate"
+  image: /assets/img/CSN-WEEK-5-Grafana-login-page.png
+  url: /projects/ecs-grafana
 
-- title: EC2 Web Server Setup
-  image: /assets/img/adding_users_to%20_group.png
-  url: /projects/ec2-setup
+- title: "CSN Project: Deploing Metabase on ECS using fargate launch type with Cloudwatch for monitoring"
+  image: /assets/img/nextup.png
+  url: /portfolio

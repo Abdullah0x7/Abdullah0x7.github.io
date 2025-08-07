@@ -1,0 +1,44 @@
+---
+layout: default
+title: Home
+---
+
+{%- if paginator.posts.size > 0 -%}
+
+{%- if paginator.page == 1 and site.posts.size > 0 -%}
+<!-- 🎯 Featured Post -->
+<div class="featured-post">
+  <h2>🌟 Featured Post</h2>
+  {%- assign featured = site.posts.first -%}
+  <h3>
+    <a href="{{ featured.url | relative_url }}">{{ featured.title }}</a>
+  </h3>
+  <p>{{ featured.excerpt | strip_html | truncatewords: 30 }}</p>
+</div>
+<hr>
+{%- endif -%}
+
+<ul class="post-list">
+  {%- for post in paginator.posts -%}
+    {%- unless paginator.page == 1 and forloop.index0 == 0 -%}
+    <li>
+      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+      <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
+    </li>
+    {%- endunless -%}
+  {%- endfor -%}
+</ul>
+
+<!-- ✅ Pagination -->
+<div class="pagination">
+  {%- if paginator.previous_page -%}
+    <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Previous</a>
+  {%- endif -%}
+
+  {%- if paginator.next_page -%}
+    <a href="{{ paginator.next_page_path | relative_url }}" style="float:right;">Next &raquo;</a>
+  {%- endif -%}
+</div>
+
+{%- endif -%}

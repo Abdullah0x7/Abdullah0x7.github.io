@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "🔐 A Nigerian Guide to IoT Security: Protecting Your Smart Devices and Personal Data"
+title:  "A Nigerian Guide to IoT Security: Protecting Your Smart Devices and Personal Data"
 date:   2025-06-27 01:35:10 +0100
 categories: Networking
 author: Abdullah Bello

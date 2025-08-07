@@ -2,11 +2,11 @@
 layout: default
 title: Portfolio
 permalink: /portfolio/
-nav: false
+nav: true
 ---
-# 🧰 My Projects
+# My Projects
 
-Here are some of my personal and professional projects. Click on any project to view the full walkthrough.
+- Here are some of my personal and professional projects. Click on any project to view the full walkthrough.
 
 <div class="portfolio-grid">
   {% for project in site.data.projects %}

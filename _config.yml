@@ -14,6 +14,10 @@ github_username: Abdullah0x7
 theme: jekyll-theme-hacker
 plugins:
   - jekyll-feed
+  - jekyll-paginate
+
+paginate: 5
+paginate_path: "/page:num"
 
 
 

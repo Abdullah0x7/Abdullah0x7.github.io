@@ -136,7 +136,7 @@ In summary, embracing smart devices doesn’t have to compromise your safety. By
 
 ---
 
-### 🧭 New to These Concepts?
+### New to These Concepts?
 
 If all of this sounds a bit too technical or you're just starting your journey into smart technology, no worries.
 

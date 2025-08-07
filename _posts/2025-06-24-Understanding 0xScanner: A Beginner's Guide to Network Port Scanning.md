@@ -32,7 +32,7 @@ Port scanners help with:
 3. **Compliance**: Ensuring only authorized services are accessible
 4. **Penetration Testing**: Ethical hacking to find vulnerabilities
 
-## 🚨 Important Legal Notice
+## Important Legal Notice
 
 **Before we continue**: Port scanning should only be done on:
 - Your own networks and computers
@@ -83,7 +83,7 @@ if port == 80:
 
 ## Key Features That Make 0xScanner Special
 
-### 🚀 Asynchronous Scanning (Super Fast)
+### Asynchronous Scanning (Super Fast)
 
 Traditional scanners work like this:
 ```
@@ -97,7 +97,7 @@ Scan ports 1,2,3,4,5... ALL AT ONCE → Collect results
 
 This is called **asynchronous programming**, it's like having multiple workers checking different doors simultaneously instead of one person going door-to-door.
 
-### 🛡️ Built-in Security Features
+### Built-in Security Features
 
 0xScanner includes safety measures:
 
@@ -111,7 +111,7 @@ def validate_target(ip_address):
     return True  # OK to scan
 ```
 
-### 📊 Professional Output
+### Professional Output
 
 Instead of messy text, 0xScanner provides structured data:
 

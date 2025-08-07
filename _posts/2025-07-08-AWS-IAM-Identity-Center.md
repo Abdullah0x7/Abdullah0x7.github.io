@@ -11,7 +11,7 @@ tags: [Cloud-Computing, AWS]
 
 ---
 
-## 📚 Table of Contents
+## Table of Contents
 
 * [What Is IAM?](#what-is-iam)
 * [Core IAM Building Blocks](#core-iam-building-blocks)
@@ -24,7 +24,7 @@ tags: [Cloud-Computing, AWS]
 
 ---
 
-## 🔐 What Is IAM?
+## What Is IAM?
 
 IAM (Identity and Access Management) helps you securely control access to AWS services and resources. IAM Identity Center (formerly AWS SSO) extends this by managing permissions across multiple AWS accounts using groups, users, and permission sets.
 
@@ -43,7 +43,7 @@ To understand IAM more easily, let’s use an **airport security analogy**:
 
 ---
 
-## 🧱 Core IAM Building Blocks
+## Core IAM Building Blocks
 
 * **Users** – individual identities that represent humans or applications.
 * **Groups** – collections of users that share the same permissions.
@@ -52,7 +52,7 @@ To understand IAM more easily, let’s use an **airport security analogy**:
 
 ---
 
-## 👥 Users & Groups
+## Users & Groups
 
 We want to:
 
@@ -76,7 +76,7 @@ We want to:
 
 ---
 
-## 🧑‍💼 Roles
+## Roles
 
 In IAM Identity Center, permission sets are used in place of traditional IAM roles to define what users can do once they assume access into AWS accounts. You create permission sets to serve the same function.
 
@@ -84,7 +84,7 @@ Think of roles like a **temporary gate pass at an airport**, it gives access onl
 
 ---
 
-## 🧾 Policies
+## Policies
 
 Policies are like **boarding passes or ID badges**. They specify what a person is allowed to do, just like a badge might say, "Can enter Lounge A" or "Can access Gate 5 only."
 
@@ -101,7 +101,7 @@ This policy allows the user to view but not create, delete, or modify any AWS re
 
 ---
 
-## 🔐 IAM Best Practices
+## IAM Best Practices
 
 * ✅ Assign permissions to **groups**, not individual users
 * ✅ Use **least privilege** principles (start with read-only access)
@@ -110,7 +110,7 @@ This policy allows the user to view but not create, delete, or modify any AWS re
 
 ---
 
-## 🛠️ Hands-On: Creating a User, Role, and Policy
+## Hands-On: Creating a User, Role, and Policy
 
 ### Step 4: Assign Permission Set to Group
 
@@ -136,7 +136,7 @@ This confirms that the read-only permissions are applied correctly.
 
 ---
 
-## 🏁 Conclusion
+## Conclusion
 
 With IAM Identity Center, you’ve set up scalable, secure access by:
 
@@ -144,7 +144,7 @@ With IAM Identity Center, you’ve set up scalable, secure access by:
 * Applying **read-only permissions** with predefined sets
 * Confirming access behavior with live user testing
 
-💡 One important takeaway: **A user's permissions are only as strong as the groups that have actual permission sets attached.** In our example:
+**_One important takeaway:_** **A user's permissions are only as strong as the groups that have actual permission sets attached.** In our example:
 
 * Ayomide belongs to both `Alpha-Team` and `Beta-Team`
 * Only `Alpha-Team` has the `ReadOnlyAccess` permission set
@@ -156,7 +156,5 @@ This means:
 > ✅ The effective permissions Ayomide has come solely from `Alpha-Team`
 
 This reinforces the best practice of assigning permissions at the **group level** and helps ensure that access is **intentional, scoped, and traceable**.
-
----
 
 

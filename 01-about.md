@@ -23,36 +23,35 @@ This blog is my digital brain dump: a mix of lessons learned, architectural patt
 
 ### 🛠 What I Do
 
-- **☁ AWS Cloud Architecture** – Designing secure, scalable infrastructures on AWS
-- **🔐 Cloud Security** – Identity & access management, compliance, and secure-by-design solutions
-- **⚙ DevOps & Automation** – CI/CD pipelines, Infrastructure as Code (IaC), monitoring
-- **🧠 Thoughtful Design** – Balancing performance, cost, and simplicity in cloud builds
-- **📝 Blogging in Public** – Sharing wins, fixes, and technical deep-dives
+- **AWS Cloud Architecture** – Designing secure, scalable infrastructures on AWS
+- **Cloud Security** – Identity & access management, compliance, and secure-by-design solutions
+- **DevOps & Automation** – CI/CD pipelines, Infrastructure as Code (IaC), monitoring
+- **Thoughtful Design** – Balancing performance, cost, and simplicity in cloud builds
+- **Blogging in Public** – Sharing wins, fixes, and technical deep-dives
 
 ---
 
-### 🧠 What You’ll Find Here
+### What You’ll Find Here
 
 This blog is where I architect, break, fix, and reflect.
 - Project Notes & Walkthroughs
-- ✍️ Practical guides from my AWS cloud journey
-- 💡 Cloud Security Tips 
-- 🛠 Fixes for things that broke and what I learned
-- 🔐 Security insights from an engineer who thinks before he builds
-- 🧰 CLI & Linux tips that make cloud life easier
-- 🧵 Occasional rants, reflections, and mini-meltdowns (relatable, hopefully)
+- Practical guides from my AWS cloud journey
+- Cloud Security Tips 
+- Fixes for things that broke and what I learned
+- Security insights from an engineer who thinks before he builds
+- CLI & Linux tips that make cloud life easier
+- Occasional rants, reflections, and mini-meltdowns (relatable, hopefully)
 
 ---
 
-### 📜 My Philosophy
+### My Philosophy
 
-- Architect with intent.
 - Secure from day one.
 - Document everything.
 - And when it breaks? Fix it, blog it, and move on.
 
 ---
 
-### 🎮 Outside the Terminal
+### Outside the Terminal
 
-I unwind with COD
+I enjoy playing COD
