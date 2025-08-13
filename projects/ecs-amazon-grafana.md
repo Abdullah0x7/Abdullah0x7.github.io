@@ -65,14 +65,14 @@ This is where I told AWS how to run the Grafana container.
    * **Task definition name**: `csn-td-demo`
    * **CPU**: 1 vCPU
    * **Memory**: 3gb
->>>*![Task Definition Infrastructure Requirements](/assets/img/td-infrastructure-requirements.png)*
+> *![Task Definition Infrastructure Requirements](/assets/img/td-infrastructure-requirements.png)*
 
 3. Add a container:
 
    * **Container name**: `grafana`
    * **Image URI**: `grafana/grafana:latest`
    * **Port mapping**: `3000`
->>>*![Task Definition Container](/assets/img/td-container.png)*
+> *![Task Definition Container](/assets/img/td-container.png)*
    * **Left the other options as-is** 
 
 4. Click **Create**
@@ -102,11 +102,11 @@ This part was a bit confusing at first, but here’s what I did:
    * Chose a **public subnet**
    * Enabled **Auto-assign public IP**
    * Created a **new security group** that allowed:
-    >>> *![Networking config security group rule](/assets/img/cs-networking1.png)*
+    >  *![Networking config security group rule](/assets/img/cs-networking1.png)*
    
    * Inbound traffic on **TCP port 3000** from `0.0.0.0/0`
 
-    >>> *![Networking config inbound rules](/assets/img/cs-networking2.png)*
+    > *![Networking config inbound rules](/assets/img/cs-networking2.png)*
 
 7. Left the rest as default and clicked **Create**
 
@@ -124,8 +124,7 @@ Here’s how I accessed Grafana:
 2. Scrolled down to find the **Public IP**
 3. Opened my browser and visited:
 http://<PUBLIC-IP>:3000
->>> *![Ip address page](/assets/img/CSN-Week-5.png)*```
-```
+> *![Ip address page](/assets/img/CSN-Week-5.png)*
 
 And boom, the **Grafana login page appeared**!
 
@@ -140,11 +139,11 @@ And boom, the **Grafana login page appeared**!
 
 You’ll be asked to change it after the first login.
 
->>> *![Grafana Dashboard](/assets/img/CSN-WEEK-5-grafana-login.png)*
+> *![Grafana Dashboard](/assets/img/CSN-WEEK-5-grafana-login.png)*
 
 * Dashboard
 
->>> *![Grafana login](/assets/img/CSN-WEEK-5-Grafana-login-page.png)*
+> *![Grafana login](/assets/img/CSN-WEEK-5-Grafana-login-page.png)*
 
 ---
 
