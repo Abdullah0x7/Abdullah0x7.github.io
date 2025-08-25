@@ -1,5 +1,0 @@
-#!/bin/bash
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-bundle install
-bundle exec jekyll build

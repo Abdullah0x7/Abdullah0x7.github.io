@@ -1,9 +1,12 @@
 # The Site Configuration
 
 theme: jekyll-theme-chirpy
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
 
 lang: en
-
 
 title: ABDULLAH BELLO # the main title
 
@@ -12,9 +15,7 @@ tagline: Cloud Engineer  # it will display as the subtitle
 description: >- # used by seo meta and the atom feed
   My Personal Blog.
 
-# Fill in the protocol & hostname for your site.
-# E.g. 'https://username.github.io', note that it does not end with a '/'.
-url: ""
+url: "https://abdullah0x7.github.io"
 
 github:
   username: abdullah0x7 # change to your GitHub username
@@ -23,8 +24,6 @@ twitter:
   username: abdullah_0x7 # change to your Twitter username
 
 social:
-  # Change to your full name.
-  # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Abdullah Bello
   email: AbdullahBello@proton.me # change to your email address
   links:
@@ -99,13 +98,6 @@ toc: true
 comments:
   # Global switch for the post-comment system. Keeping it empty means disabled.
   provider: giscus
-  # The provider options are as follows:
-  disqus:
-    shortname: # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
-  # utterances settings › https://utteranc.es/
-  utterances:
-    repo: # <gh-username>/<repo>
-    issue_term: # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
     repo: Abdullah0x7/blog-comments
