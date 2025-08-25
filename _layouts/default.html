@@ -1,89 +1,86 @@
-<!DOCTYPE html>
-<html lang="{{ site.lang | default: " en-US" }}">
+---
+layout: compress
+---
 
-<head>
-  <meta charset='utf-8'>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-  {% include head-custom.html %}
-  <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+<!doctype html>
 
-  {% seo %}
-  {% if jekyll.environment == "production" %}
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PMZJMWM3M5"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-PMZJMWM3M5');
-  </script>
-  {% endif %}
+{% include origin-type.html %}
 
-</head>
+{% include lang.html %}
 
-<body>
-  <header class="site-header">
-    <div class="containerx">
-      <a id="a-title" href="{{ '/' | relative_url }}" class="site-title">
-        <h1>{{ site.title | default: site.github.repository_name }}</h1>
-      </a>
+{% if site.theme_mode %}
+  {% capture prefer_mode %}data-mode="{{ site.theme_mode }}"{% endcapture %}
+{% endif %}
 
-      <h2 class="site-tagline">{{ site.description | default: site.github.project_tagline }}</h2>
-    <nav class="site-nav">
-      <div class="nav-links">
-        <a href="{{ '/' | relative_url }}" class="nav-icon {% if page.url == '/' or page.url == '/index.html' %}active{% endif %}" title="Home">Home</a>
-        {%- assign current = page.url | relative_url -%}
-        {%- for p in site.pages -%}
-        {%- if p.nav == true -%}
-        {%- assign link_url = p.url | relative_url -%}
-        <a href="{{ link_url }}" class="{% if current == link_url %}active{% endif %}">
-          {{ p.title | escape }}
-        </a>
-        {%- endif -%}
-        {%- endfor -%}
+<!-- `site.alt_lang` can specify a language different from the UI -->
+<html lang="{{ page.lang | default: site.alt_lang | default: site.lang }}" {{ prefer_mode }}>
+  {% include head.html %}
+
+  <body>
+    {% include sidebar.html lang=lang %}
+
+    <div id="main-wrapper" class="d-flex justify-content-center">
+      <div class="container d-flex flex-column px-xxl-5">
+        {% include topbar.html lang=lang %}
+
+        <div class="row flex-grow-1">
+          <main aria-label="Main Content" class="col-12 col-lg-11 col-xl-9 px-md-4">
+            {% if layout.refactor or layout.layout == 'default' %}
+              {% include refactor-content.html content=content lang=lang %}
+            {% else %}
+              {{ content }}
+            {% endif %}
+          </main>
+
+          <!-- panel -->
+          <aside aria-label="Panel" id="panel-wrapper" class="col-xl-3 ps-2 text-muted">
+            <div class="access">
+              {% include_cached update-list.html lang=lang %}
+              {% include_cached trending-tags.html lang=lang %}
+            </div>
+
+            {% for _include in layout.panel_includes %}
+              {% assign _include_path = _include | append: '.html' %}
+              {% include {{ _include_path }} lang=lang %}
+            {% endfor %}
+          </aside>
+        </div>
+
+        <div class="row">
+          <!-- tail -->
+          <div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 px-md-4">
+            {% for _include in layout.tail_includes %}
+              {% assign _include_path = _include | append: '.html' %}
+              {% include {{ _include_path }} lang=lang %}
+            {% endfor %}
+
+            {% include_cached footer.html lang=lang %}
+          </div>
+        </div>
+
+        {% include_cached search-results.html lang=lang %}
       </div>
-    </nav>
+
+      <aside aria-label="Scroll to Top">
+        <button id="back-to-top" type="button" class="btn btn-lg btn-box-shadow">
+          <i class="fas fa-angle-up"></i>
+        </button>
+      </aside>
     </div>
-  </header>
 
+    <div id="mask" class="d-none position-fixed w-100 h-100 z-1"></div>
 
-  <div class="container">
-    <section id="main_content">
-      {{ content }}
-    </section>
-  </div>
+    {% if site.pwa.enabled %}
+      {% include_cached notification.html lang=lang %}
+    {% endif %}
 
-  <footer style="text-align: center; padding: 1em; margin-top: 3em; border-top: 1px solid #ccc; font-size: 0.9em;">
-    <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }} — Built with 💻 by <a href="https://github.com/Abdullah0x7"
-        target="_blank">@Abdullah0x7</a></p>
-    <p>
-      <a href="/about/">About</a> ·
-      <a href="/contact/">Contact</a> ·
-      <a href="/tags/">Tags</a> ·
-      <a href="/privacy-policy">Privacy Policy</a> ·
-    </p>
-  </footer>
-  <button id="backToTop" title="Go to top">↑</button>
-</body>
+    <!-- Embedded scripts -->
 
+    {% for _include in layout.script_includes %}
+      {% assign _include_path = _include | append: '.html' %}
+      {% include {{ _include_path }} %}
+    {% endfor %}
 
-<script>
-  // Show button when user scrolls down
-  window.onscroll = function () {
-    const btn = document.getElementById("backToTop");
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-      btn.style.display = "block";
-    } else {
-      btn.style.display = "none";
-    }
-  };
-
-  // Scroll to top when button is clicked
-  document.getElementById("backToTop").onclick = function () {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-</script>
-
+    {% include_cached search-loader.html lang=lang %}
+  </body>
 </html>

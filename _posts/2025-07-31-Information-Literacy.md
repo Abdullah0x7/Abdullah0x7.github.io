@@ -1,10 +1,12 @@
 ---
-layout: post
-title:  "I Grew Up Loving Information. Then I Learned How Dangerous It Can Be."
+title:  I Grew Up Loving Information. Then I Learned How Dangerous It Can Be.
 date:   2025-07-31 01:35:10 +0100
-categories: Tech-Reflections
-author: Abdullah Bello
+categories: [Tech-Reflections]
+author: Abdullah
 tags: [Tech-Reflections]
+pin: false
+math: true
+mermaid: true
 ---
 
 There was a time when books used to be the primary source of information, but today we've found ourselves bombarded with an overwhelming amount of it from a multitude of sources. I've always been obsessed with information, as far back as 2016, after my secondary school education. I remember creating a blog with the blogspot.com domain to share university admission information and gist while I was actively looking for admission myself. I called it **ngcampusinfo.blogspot.com**. I eventually shut this blog down.

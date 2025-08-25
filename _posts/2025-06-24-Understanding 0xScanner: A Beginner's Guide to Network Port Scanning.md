@@ -1,10 +1,13 @@
 ---
-layout: post
-title:  "Understanding 0xScanner: A Beginner's Guide to Network Port Scanning"
+title:  "Understanding 0xScanner"
+description: A Beginner's Guide to Network Port Scanning
+author: Abdullah
 date:   2025-06-24 01:35:10 +0100
-categories: Networking
-author: Abdullah Bello
-tags: [Cybersecurity, Networking,Tutorial]
+categories: [Networking]
+tags: [cybersecurity, tutorial, networking]
+pin: false
+math: true
+mermaid: true
 ---
 
 ## What is 0xScanner?

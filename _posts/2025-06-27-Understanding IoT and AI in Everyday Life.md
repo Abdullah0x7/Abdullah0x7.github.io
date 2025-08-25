@@ -1,10 +1,12 @@
 ---
-layout: post
 title:  "Understanding IoT and AI in Everyday Life"
 date:   2025-06-27 01:35:10 +0100
-categories: Networking
-author: Abdullah Bello
-tags: [Cybersecurity, Networking, IoT]
+categories: [Networking]
+author: Abdullah
+tags: [cybersecurity, networking, IoT]
+pin: false
+math: true
+mermaid: true
 ---
 
 The **Internet of Things (IoT)** refers to everyday objects made “smart” by adding sensors, software and internet connectivity.  In other words, IoT devices are physical gadgets (like thermostats, appliances, cameras or meters) that connect wirelessly to a network and exchange data.  These devices often include sensors or actuators, for example, a temperature sensor or a motion detector and can record information about their environment.  As one technology law firm explains, IoT devices “collect data about their environment, which frequently includes data related to people”.

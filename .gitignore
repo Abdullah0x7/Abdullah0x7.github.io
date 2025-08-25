@@ -5,4 +5,5 @@ _site
 vendor
 
 
-Gemfile.lock
+Gemfile.locknode_modules/
+node_modules/

@@ -1,10 +1,13 @@
 ---
-layout: post
-title:  "My Journey into Oracle Cloud Infrastructure: A Personal Foundations Journal"
+title:  My Journey into Oracle Cloud Infrastructure
+description: A Personal Foundations Journal
 date:   2025-07-20 01:35:10 +0100
-categories: Cloud Computing
-author: Abdullah Bello
-tags: [Cloud-Computing]
+categories: [Cloud-Computing]
+author: Abdullah
+tags: [Cloud-Computing, OCI]
+pin: false
+math: true
+mermaid: true
 ---
 
 A few weeks ago, I set out on a mission, not just to earn a certification, but to truly understand the Oracle Cloud. I wanted working knowledge: what to click, what matters, what breaks, and why security, identity, networking, and cost governance all have to line up if you want a real cloud environment that survives contact with production.

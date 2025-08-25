@@ -1,10 +1,12 @@
 ---
-layout: post
-title:  "Understanding AWS VPC and Subnets"
+title:  Understanding AWS VPC and Subnets
 date:   2025-07-30 01:35:10 +0100
-categories: Cloud Computing
-author: Abdullah Bello
+categories: [Cloud-Computing]
+author: Abdullah
 tags: [Cloud-Computing, AWS]
+pin: false
+math: true
+mermaid: true
 ---
 
 
