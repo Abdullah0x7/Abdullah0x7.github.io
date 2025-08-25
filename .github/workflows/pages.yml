@@ -1,0 +1,38 @@
+name: Build and Deploy Jekyll (Chirpy) Site
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1️⃣ Checkout repo
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # 2️⃣ Setup Ruby
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'   # match your local Ruby version
+          bundler-cache: true
+
+      # 3️⃣ Install dependencies
+      - name: Install Gems
+        run: bundle install
+
+      # 4️⃣ Build the Jekyll site
+      - name: Build Site
+        run: bundle exec jekyll build
+
+      # 5️⃣ Deploy to GitHub Pages
+      - name: Deploy to Pages
+        uses: peaceiris/actions-gh-pages@v6
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          keep_files: true
