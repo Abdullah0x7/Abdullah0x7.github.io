@@ -84,6 +84,7 @@ GitHub **does not handle `www` → root redirect automatically** when using a cu
    - Paste this code:
 
 ```javascript
+
 function handler(event) {
     var request = event.request;
     var host = request.headers.host.value;
@@ -100,6 +101,7 @@ function handler(event) {
 
     return request;
 }
+```
 
 * Attach it to **Viewer Request** on your distribution.
 
