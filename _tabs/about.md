@@ -3,17 +3,18 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-## Hi, I’m Abdullah Bello.  
-An aspiring **Cloud & Cybersecurity Engineer**  
+## Hi, My name is Abdullah Bello.  
+An **IT Instructor** and an aspiring **Cloud Security Engineer**  
 
-Welcome to my corner of the internet!  
-I’m currently diving deep into the **ALX AWS Cloud Fellowship**, gaining hands-on experience in designing **secure, scalable, and cost-effective cloud solutions**. With a background in **Computer Science**, I’m passionate about building resilient architectures and integrating **security from day one**.
+Welcome to my corner of the internet!
+
+I am currently enrolled into the **AWS Cloud** programme with **ALX AFRICA**, gaining hands-on experience in designing **secure, scalable, and cost-effective cloud solutions**. With a background in **Computer Science**, I am passionate about building resilient architectures and integrating **security from day one**.
 
 This blog is my **digital brain dump**: lessons learned, architectural patterns, project breakdowns, and the occasional “why won’t this work?” moment, shared openly as I grow.
 
 ---
 
-## 🏅 Badges
+## Badges
 
 ![OCI Foundations Associate](/assets/img/OCI25FNDCFA.png)  
 ![Google Cybersecurity Professional Certificate V2](/assets/img/google-cybersec.png)
@@ -28,7 +29,7 @@ This blog is my **digital brain dump**: lessons learned, architectural patterns,
 
 ---
 
-### What You’ll Find Here
+### What You will Find Here
 
 - Project notes & walkthroughs  
 - Practical guides from my AWS cloud journey  
@@ -44,12 +45,12 @@ This blog is my **digital brain dump**: lessons learned, architectural patterns,
 
 - **Secure from day one.**  
 - **Document everything.**  
-- And when it breaks? Fix it, blog it, move on.  
+- **And when it breaks? Fix it, blog it, move on.**
 
 ---
 
 ### Outside the Terminal
 
 
-**When I’m not building or securing systems, I’m probably playing chess or getting a few COD matches in.**
+**When I am not building or securing systems, I am probably playing chess.**
 
