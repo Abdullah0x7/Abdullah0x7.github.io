@@ -52,5 +52,5 @@ This blog is my **digital brain dump**: lessons learned, architectural patterns,
 ### Outside the Terminal
 
 
-**When I am not building or securing systems, I am probably playing chess.**
+**When I'm not building or securing systems, I'm probably playing chess.**
 
