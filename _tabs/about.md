@@ -15,9 +15,10 @@ This blog is my **digital brain dump**: lessons learned, architectural patterns,
 ---
 
 ## Badges
-
-![OCI Foundations Associate](/assets/img/OCI25FNDCFA.png)  
+ 
 ![Google Cybersecurity Professional Certificate V2](/assets/img/google-cybersec.png)
+![OCI Foundations Associate](/assets/img/OCI25FNDCFA.png) 
+![AWS Certified Cloud Practioner](/assets/img/aws-certified-cloud-practitioner.png)
 
 ---
 

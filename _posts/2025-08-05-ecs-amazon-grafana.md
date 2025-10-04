@@ -5,7 +5,7 @@ author: Abdullah
 date: 2025-08-05 01:35:10 +0100
 categories: [Tutorial]
 tags: [networking, tutorial, ECS, fargate]
-pin: true
+pin: false
 math: true
 mermaid: true
 ---
