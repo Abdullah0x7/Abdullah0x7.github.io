@@ -3,7 +3,7 @@
 source "https://rubygems.org"
 
 gem "jekyll", "~> 4.4"
-gem "jekyll-theme-chirpy", "~> 6.0"  # or whatever the latest version is
+gem "jekyll-theme-chirpy", "~> 7.4"  # or whatever the latest version is
 
 group :jekyll_plugins do
   gem "jekyll-feed"
