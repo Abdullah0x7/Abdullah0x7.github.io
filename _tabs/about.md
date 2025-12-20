@@ -51,7 +51,7 @@ This blog serves as my **digital brain dump**: lessons learned, architectural pa
 
 ### Outside the Terminal
 
-When I'm not building or securing systems, I'm likely playing chess or refining my next lesson plan.
+When I'm not building or securing systems, I'm likely playing chess.
 
 ---
 

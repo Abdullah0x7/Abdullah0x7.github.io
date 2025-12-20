@@ -5,7 +5,7 @@ author: Abdullah
 date: 2025-08-26 00:10:00 +0100
 categories: [Tutorial]
 tags: [AWS, Route53, CloudFront, GitHub Pages, DNS]
-pin: true
+pin: false
 math: false
 mermaid: false
 ---
