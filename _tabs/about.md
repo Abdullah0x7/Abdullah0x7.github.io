@@ -5,7 +5,7 @@ order: 4
 ---
 
 ## Hello, I am Abdullah Bello.
-**IT Instructor | Cloud Engineer | SecOps Specialist**
+**IT Instructor | Cloud Engineer**
 
 Welcome to my corner of the internet.
 
