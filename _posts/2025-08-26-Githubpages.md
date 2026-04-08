@@ -3,8 +3,7 @@ title: How I Deployed a Custom Domain for My GitHub Pages with AWS Route 53 & Cl
 description: A step-by-step guide on integrating GitHub Pages with a custom domain using AWS Route 53 and CloudFront Functions for seamless redirects.
 author: Abdullah
 date: 2025-08-26 00:10:00 +0100
-categories: [Tutorial]
-tags: [AWS, Route53, CloudFront, GitHub Pages, DNS]
+tags: [AWS, Route53, CloudFront, GitHub Pages, DNS,Cloud-Computing]
 pin: false
 math: false
 mermaid: false

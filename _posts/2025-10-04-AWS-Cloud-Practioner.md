@@ -3,9 +3,8 @@ title:  "My AWS Cloud Practitioner Journey"
 description: From Foundations to Certification
 author: Abdullah
 date:   2025-10-04 01:35:10 +0100
-categories: [Tech-Reflections]
-tags: [Tech-Reflections, AWS]
-pin: true
+tags: [Tech-Reflections, AWS, Cloud-Computing]
+pin: false
 math: true
 mermaid: true
 ---

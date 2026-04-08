@@ -3,8 +3,8 @@ title: "Whelmed, My 2025 Retrospective"
 description: "Reflecting on a year that wasn't overwhelmed or underwhelmed, just... whelmed. And why that's exactly what I needed."
 date: 2025-12-20 01:35:10 +0100
 categories: [Tech-Reflections]
-tags: [gratitude, growth, cloud, learning]
-pin: true
+tags: [gratitude, growth, Cloud-Computing, learning, Tech-Reflections]
+pin: false
 math: true
 mermaid: true
 ---
