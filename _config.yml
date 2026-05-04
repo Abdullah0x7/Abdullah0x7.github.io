@@ -8,9 +8,9 @@ plugins:
 
 lang: en
 title: ABDULLAH BELLO # the main title
-tagline: IT Instructor & Cloud Engineer  # it will display as the subtitle
+tagline: Cloud & Security Engineer  # it will display as the subtitle
 description: >- # used by seo meta and the atom feed
-  The official website of Abdullah Bello, IT Instructor and Cloud Engineer.
+  The official website of Abdullah Bello, Cloud Security.
   Expert tutorials on Cloud Computing, DevSecOps, and Software Engineering.
 url: "https://abdullahbello.name.ng"
 github:
