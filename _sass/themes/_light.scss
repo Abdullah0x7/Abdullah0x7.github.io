@@ -1,6 +1,24 @@
 @mixin styles {
   /* Framework color */
   --main-bg: white;
+  /* Glassmorphism */
+  --accent-color: #4338ca;
+  --accent-color-hover: #3730a3;
+  --glass-bg: rgba(255, 255, 255, 0.72);
+  --glass-border: rgba(255, 255, 255, 0.45);
+  --glass-border-hover: rgba(67, 56, 202, 0.35);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  --glass-shadow-hover: 0 12px 40px rgba(67, 56, 202, 0.12);
+  --tag-glass-bg: rgba(67, 56, 202, 0.08);
+  --mesh-bg:
+    radial-gradient(ellipse at 20% 0%, rgba(67, 56, 202, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 100%, rgba(99, 102, 241, 0.06) 0%, transparent 50%),
+    #f0f2f5;
+  --radius-lg: 12px;
+  --link-color: #4338ca;
+  --sidebar-bg: rgba(246, 248, 250, 0.85);
+  --topbar-bg: rgba(255, 255, 255, 0.75);
+
   --mask-bg: #c1c3c5;
   --main-border-color: #f3f3f3;
 
@@ -12,7 +30,7 @@
   --label-color: #585858;
   --blockquote-border-color: #eeeeee;
   --blockquote-text-color: #757575;
-  --link-color: #0056b2;
+  --link-color: var(--accent-color);
   --link-underline-color: #dee2e6;
   --button-bg: #ffffff;
   --btn-border-color: #e9ecef;
@@ -31,7 +49,7 @@
   /* Sidebar */
   --site-title-color: rgb(113 113 113);
   --site-subtitle-color: #717171;
-  --sidebar-bg: #f6f8fa;
+  /* sidebar-bg set in glass tokens */
   --sidebar-border-color: #efefef;
   --sidebar-muted-color: #545454;
   --sidebar-active-color: #1d1d1d;
@@ -41,7 +59,7 @@
   --avatar-border-color: white;
 
   /* Topbar */
-  --topbar-bg: rgb(255 255 255 / 70%);
+  /* topbar-bg set in glass tokens */
   --topbar-text-color: rgb(78 78 78);
   --search-border-color: rgb(240 240 240);
   --search-icon-color: #c2c6cc;

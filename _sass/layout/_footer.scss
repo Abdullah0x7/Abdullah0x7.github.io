@@ -4,33 +4,97 @@
 @use '../abstracts/placeholders';
 
 footer {
-  background-color: var(--main-bg);
-  height: v.$footer-height;
-  border-top: 1px solid var(--main-border-color);
+  background-color: transparent;
+  min-height: v.$footer-height;
+  border-top: 1px solid var(--glass-border);
+  padding: 1.5rem 0.5rem;
+  width: 100%;
+  gap: 1rem;
 
   @extend %text-xs;
 
   @include bp.lt(bp.get(lg)) {
     @include mx.slide;
 
-    height: v.$footer-height-large;
+    min-height: auto;
+    padding: 1.75rem 1rem max(1.75rem, env(safe-area-inset-bottom));
+    text-align: center;
+    gap: 1.25rem;
+  }
+
+  @include bp.lg {
     padding: 1.5rem 0;
   }
 
-  a {
-    @extend %text-highlight;
+  .footer-left {
+    color: var(--text-muted-color);
+    font-size: 0.85rem;
+    line-height: 1.5;
 
-    &:hover {
-      @extend %link-hover;
+    a {
+      @extend %text-highlight;
+      color: var(--text-color);
+      text-decoration: none;
+      transition: color 0.2s ease;
+
+      &:hover {
+        @extend %link-hover;
+      }
+    }
+
+    em {
+      @extend %text-highlight;
+    }
+
+    p {
+      margin-bottom: 0;
+
+      @include bp.lt(bp.get(lg)) {
+        text-align: center;
+      }
+
+      @include bp.lg {
+        text-align: left;
+      }
     }
   }
 
-  em {
-    @extend %text-highlight;
-  }
+  .footer-right {
+    .footer-social {
+      gap: 0.5rem 0.75rem;
 
-  p {
-    text-align: center;
-    margin-bottom: 0;
+      .footer-social-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        padding: 0.3rem 0.75rem;
+        border-radius: 999px;
+        background: var(--glass-bg);
+        border: 1px solid var(--glass-border);
+        color: var(--text-muted-color);
+        font-size: 0.8rem;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.2s ease;
+
+        i {
+          font-size: 0.85rem;
+          color: var(--text-muted-color);
+          transition: color 0.2s ease;
+        }
+
+        &:hover {
+          background: var(--tag-glass-bg);
+          border-color: var(--glass-border-hover);
+          color: var(--accent-color);
+          transform: translateY(-1px);
+          text-decoration: none;
+
+          i {
+            color: var(--accent-color);
+          }
+        }
+      }
+    }
   }
 }

@@ -1,5 +1,6 @@
 ---
 title:  Understanding AWS VPC and Subnets
+description: Master AWS VPC and subnet setup with this hands-on guide to cloud networking, IP ranges, routing, and security for beginners.
 date:   2025-07-30 01:35:10 +0100
 categories: [Cloud-Computing]
 author: Abdullah

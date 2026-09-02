@@ -1,10 +1,13 @@
 ---
 permalink: /robots.txt
-# The robots rules
 ---
-
 User-agent: *
+Allow: /
 
+Disallow: /assets/js/
+Disallow: /assets/css/
+Disallow: /_drafts/
+Disallow: /vendor/
 Disallow: /norobots/
 
-Sitemap: {{ '/sitemap.xml' | absolute_url }}
+Sitemap: {{ site.url }}/sitemap.xml

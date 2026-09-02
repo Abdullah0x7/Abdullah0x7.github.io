@@ -3,7 +3,7 @@ title: "What Changed Since December"
 description: "Reflecting on a year that wasn't overwhelmed or underwhelmed, just... whelmed. And why that's exactly what I needed."
 date: 2026-03-23 01:35:10 +0100
 tags: [Tech-Reflections, gratitude, growth, Cloud-Computing, learning, kubernetes]
-pin: true
+pin: false
 math: true
 mermaid: true
 ---

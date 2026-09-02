@@ -6,6 +6,7 @@
 #topbar-wrapper {
   height: v.$topbar-height;
   background-color: var(--topbar-bg);
+  transition: top 0.2s ease, background-color 0.25s ease;
 
   @include bp.lt(bp.get(lg)) {
     @include mx.slide(top 0.2s ease);
@@ -18,19 +19,39 @@
   @extend %btn-color;
 
   #breadcrumb {
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: var(--text-muted-color);
-    padding-left: 0.5rem;
+    padding-left: 0.25rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
 
-    a:hover {
-      @extend %link-hover;
+    a {
+      color: var(--text-muted-color);
+      text-decoration: none;
+      transition: color 0.2s ease;
+
+      &:hover {
+        @extend %link-hover;
+      }
     }
 
     span {
+      display: inline-flex;
+      align-items: center;
+
+      &:last-child {
+        color: var(--heading-color);
+        font-weight: 500;
+      }
+
       &:not(:last-child) {
         &::after {
           content: '›';
-          padding: 0 0.3rem;
+          padding: 0 0.45rem;
+          color: var(--text-muted-color);
+          opacity: 0.6;
+          font-weight: 400;
         }
       }
     }
@@ -40,7 +61,7 @@
     }
 
     @include bp.between(bp.get(lg), calc(#{bp.get(xl)} - 1px)) {
-      width: 65%;
+      max-width: 65%;
       overflow: hidden;
       text-overflow: ellipsis;
       word-break: keep-all;
@@ -59,13 +80,16 @@
 
 #topbar-title {
   display: none;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 600;
-  font-family: sans-serif;
-  color: var(--topbar-text-color);
+  font-family: v.$font-family-heading;
+  color: var(--heading-color);
   text-align: center;
-  width: 70%;
-  word-break: keep-all;
+  max-width: calc(100% - 100px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  letter-spacing: -0.01em;
 
   @include bp.lt(bp.get(lg)) {
     display: block;
@@ -81,6 +105,33 @@
   display: none;
 
   @include bp.lt(bp.get(lg)) {
-    display: block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    border-radius: 50%;
+    color: var(--text-color);
+    background: transparent;
+    border: none;
+    transition: all 0.2s ease;
+
+    i {
+      font-size: 1.05rem;
+      color: var(--text-color);
+      transition: color 0.2s ease;
+    }
+
+    &:hover,
+    &:focus-visible {
+      color: var(--accent-color);
+      background: var(--glass-bg);
+      outline: none;
+
+      i {
+        color: var(--accent-color);
+      }
+    }
   }
 }

@@ -1,5 +1,6 @@
 ---
 title:  "Understanding IoT and AI in Everyday Life"
+description: Learn how IoT and AI work together in everyday devices — a practical guide for beginners exploring smart technology.
 date:   2025-06-27 01:35:10 +0100
 categories: [Networking]
 author: Abdullah

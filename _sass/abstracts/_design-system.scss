@@ -1,0 +1,34 @@
+// Design System — abdullahbello.name.ng
+// 8px grid · glassmorphism · WCAG AA contrast targets
+
+$space-1: 0.5rem;
+$space-2: 1rem;
+$space-3: 1.5rem;
+$space-4: 2rem;
+$space-5: 2.5rem;
+$space-6: 3rem;
+$space-8: 4rem;
+
+$font-system: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-mono: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, monospace;
+$prose-max-width: 42rem;
+
+$accent-indigo: #4338ca;
+$accent-indigo-light: #6366f1;
+$accent-indigo-dark: #3730a3;
+
+$glass-blur: 16px;
+$glass-blur-strong: 24px;
+
+@mixin glass-surface($blur: $glass-blur) {
+  backdrop-filter: blur($blur);
+  -webkit-backdrop-filter: blur($blur);
+}
+
+@mixin glass-card($blur: $glass-blur) {
+  @include glass-surface($blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--glass-shadow);
+  background: var(--glass-bg);
+}

@@ -4,46 +4,34 @@
   aria-label="Site Info"
   class="
     d-flex flex-column justify-content-center text-muted
-    flex-lg-row justify-content-lg-between align-items-lg-center pb-lg-3
+    flex-lg-row justify-content-lg-between align-items-lg-center
   "
 >
-  <p>
-    {{- '©' }}
-    <time>{{ 'now' | date: '%Y' }}</time>
+  <div class="footer-left">
+    <p class="mb-0">
+      {{- '©' }}
+      <time>{{ 'now' | date: '%Y' }}</time>
 
-    {% if site.social.links %}
-      <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>.
-    {% else %}
-      <em class="fst-normal">{{ site.social.name }}</em>.
-    {% endif %}
+      {% if site.social.links %}
+        <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>.
+      {% else %}
+        <em class="fst-normal">{{ site.social.name }}</em>.
+      {% endif %}
+      <span>All rights reserved.</span>
+    </p>
+  </div>
 
-    <!-- {% if site.data.locales[include.lang].copyright.brief %}
-      <span
-        data-bs-toggle="tooltip"
-        data-bs-placement="top"
-        title="{{ site.data.locales[include.lang].copyright.verbose }}"
-      >
-        {{- site.data.locales[include.lang].copyright.brief -}}
-      </span>
-    {% endif %} -->
-  </p>
-
-  <p>
-    <!-- {%- capture _platform -%}
-      <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a>
-    {%- endcapture -%}
-
-    {%- capture _theme -%}
-      <a
-        data-bs-toggle="tooltip"
-        data-bs-placement="top"
-        title="v{{ theme.version }}"
-        href="https://github.com/cotes2020/jekyll-theme-chirpy"
-        target="_blank"
-        rel="noopener"
-      >Chirpy</a>
-    {%- endcapture -%}
-
-    {{ site.data.locales[include.lang].meta | replace: ':PLATFORM', _platform | replace: ':THEME', _theme }} -->
-  </p>
+  <div class="footer-right">
+    <div class="footer-social d-flex flex-wrap align-items-center justify-content-center justify-content-lg-end">
+      <a href="https://github.com/abdullah0x7" rel="noopener" target="_blank" aria-label="GitHub" class="footer-social-link">
+        <i class="fab fa-github"></i> <span>GitHub</span>
+      </a>
+      <a href="https://twitter.com/abdullahsecops" rel="noopener" target="_blank" aria-label="Twitter" class="footer-social-link">
+        <i class="fa-brands fa-x-twitter"></i> <span>Twitter</span>
+      </a>
+      <a href="{{ '/feed.xml' | relative_url }}" aria-label="RSS Feed" class="footer-social-link">
+        <i class="fas fa-rss"></i> <span>RSS</span>
+      </a>
+    </div>
+  </div>
 </footer>

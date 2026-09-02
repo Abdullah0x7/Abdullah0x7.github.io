@@ -1,0 +1,103 @@
+{% comment %} Schema.org structured data {% endcomment %}
+{% if page.layout == 'post' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.description | default: page.excerpt | strip_html | truncate: 160 | jsonify }},
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  {% if page.last_modified_at %}"dateModified": "{{ page.last_modified_at | date_to_xmlschema }}",{% else %}"dateModified": "{{ page.date | date_to_xmlschema }}",{% endif %}
+  "author": {
+    "@type": "Person",
+    "name": "Abdullah Bello",
+    "url": "{{ site.url }}/about/",
+    "sameAs": [
+      "https://github.com/abdullah0x7",
+      "https://twitter.com/abdullahsecops",
+      "https://www.linkedin.com/in/abdullahsecops"
+    ]
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Abdullah Bello",
+    "url": "{{ site.url }}"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ page.url | absolute_url }}"
+  },
+  "url": "{{ page.url | absolute_url }}",
+  {% if page.image %}
+  "image": "{{ page.image.path | default: page.image | absolute_url }}",
+  {% else %}
+  "image": "{{ site.social_preview_image | default: '/assets/img/image.png' | absolute_url }}",
+  {% endif %}
+  "keywords": {{ page.tags | join: ', ' | jsonify }},
+  "articleSection": {{ page.categories | first | default: 'Cloud Computing' | jsonify }},
+  "inLanguage": "en"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ site.url }}/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Posts",
+      "item": "{{ site.url }}/archives/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ page.title | jsonify }},
+      "item": "{{ page.url | absolute_url }}"
+    }
+  ]
+}
+</script>
+{% elsif page.layout == 'home' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": {{ site.title | jsonify }},
+  "description": {{ site.description | strip_newlines | jsonify }},
+  "url": "{{ site.url }}/",
+  "author": {
+    "@type": "Person",
+    "name": "Abdullah Bello",
+    "url": "{{ site.url }}/about/",
+    "jobTitle": "Cloud & Security Engineer",
+    "sameAs": [
+      "https://github.com/abdullah0x7",
+      "https://twitter.com/abdullahsecops",
+      "https://www.linkedin.com/in/abdullahsecops"
+    ]
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "{{ site.url }}/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+{% elsif page.layout == 'tag' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": {{ page.title | jsonify }},
+  "description": "Technical articles tagged {{ page.title }} by Abdullah Bello on cloud computing and security.",
+  "url": "{{ page.url | absolute_url }}"
+}
+</script>
+{% endif %}

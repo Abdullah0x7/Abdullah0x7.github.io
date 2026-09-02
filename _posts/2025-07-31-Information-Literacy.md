@@ -1,5 +1,6 @@
 ---
 title:  I Grew Up Loving Information. Then I Learned How Dangerous It Can Be.
+description: Why information literacy matters in the digital age — lessons on verifying sources, spotting misinformation, and thinking critically online.
 date:   2025-07-31 01:35:10 +0100
 categories: [Tech-Reflections]
 author: Abdullah

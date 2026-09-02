@@ -7,10 +7,10 @@ $sb-btn-gap-lg: 1rem !default;
 
 /* other framework sizes */
 
-$topbar-height: 3rem !default;
-$search-max-width: 200px !default;
-$footer-height: 5rem !default;
-$footer-height-large: 6rem !default; /* screen width: < 850px */
+$topbar-height: 3.25rem !default;
+$search-max-width: 240px !default;
+$footer-height: 4.5rem !default;
+$footer-height-large: auto !default; /* dynamic height on mobile */
 $main-content-max-width: 1250px !default;
 $radius-sm: 6px !default;
 $radius-lg: 10px !default;
@@ -26,5 +26,5 @@ $code-icon-width: 1.75rem !default;
 
 /* fonts */
 
-$font-family-base: 'Source Sans Pro', 'Microsoft Yahei', sans-serif !default;
-$font-family-heading: Lato, 'Microsoft Yahei', sans-serif !default;
+$font-family-base: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !default;
+$font-family-heading: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !default;

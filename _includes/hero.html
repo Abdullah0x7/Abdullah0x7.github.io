@@ -1,0 +1,27 @@
+<!-- Hero Section -->
+<section class="hero-section" aria-label="Profile introduction">
+  {% capture avatar_url %}{% include media-url.html src=site.avatar %}{% endcapture %}
+  <img
+    class="hero-avatar"
+    src="{{ avatar_url }}"
+    alt="Abdullah Bello — Cloud and Security Engineer"
+    width="104"
+    height="104"
+    loading="eager"
+  >
+  <div class="hero-content">
+    <h1 class="hero-headline">Cloud &amp; Security Engineer</h1>
+    <p class="hero-subtitle">
+      Hands-on tutorials on AWS, DevSecOps, and cloud architecture.
+      Practical guides for engineers and learners building secure systems.
+    </p>
+    <div class="hero-cta">
+      <a href="{{ '/about/' | relative_url }}" class="btn-hero btn-hero-primary">
+        <i class="fas fa-user" aria-hidden="true"></i> About Me
+      </a>
+      <a href="{{ '/archives/' | relative_url }}" class="btn-hero btn-hero-secondary">
+        <i class="fas fa-book-open" aria-hidden="true"></i> Browse Posts
+      </a>
+    </div>
+  </div>
+</section>

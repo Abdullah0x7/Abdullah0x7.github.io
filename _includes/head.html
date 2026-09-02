@@ -51,10 +51,11 @@
   {{ seo_tags }}
 
   <title>
-    {%- unless page.layout == 'home' -%}
-      {{ page.title | append: ' | ' }}
-    {%- endunless -%}
-    {{ site.title }}
+    {%- if page.layout == 'home' -%}
+      Cloud & Security Engineer | {{ site.title }}
+    {%- else -%}
+      {{ page.title | truncate: 50 }} | Abdullah Bello
+    {%- endif -%}
   </title>
 
   {% include_cached favicons.html %}
